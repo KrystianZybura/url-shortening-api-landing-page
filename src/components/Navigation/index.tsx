@@ -1,10 +1,10 @@
-import { Container } from "./styled";
+import { ButtonLink } from "./styled";
 
 const Navigation = () => (
-  <Container className=" bg-primary">
-    <nav className="container navbar navbar-expand-sm navbar-dark ">
-      <a className="navbar-brand" href="#">
-        Navbar
+  <header className="bg-light">
+    <nav className="container navbar navbar-expand-sm navbar-light ">
+      <a className="navbar-brand fs-2 me-5 fw-bold" href="#">
+        Shortly
       </a>
       <button
         className="navbar-toggler d-lg-none"
@@ -15,52 +15,41 @@ const Navigation = () => (
         aria-expanded="false"
         aria-label="Toggle navigation"
       ></button>
-      <div className="collapse navbar-collapse" id="collapsibleNavId">
-        <ul className="navbar-nav me-auto mt-2 mt-lg-0">
+      <div
+        className="collapse navbar-collapse text-secondary"
+        id="collapsibleNavId"
+      >
+        <ul className="navbar-nav me-auto mt-2 mt-lg-0 gap-2">
           <li className="nav-item">
-            <a className="nav-link active" href="#" aria-current="page">
-              Home <span className="visually-hidden">(current)</span>
+            <a className="nav-link" href="#" aria-current="page">
+              Features
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              Link
+              Pricing
             </a>
           </li>
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
-              id="dropdownId"
-              data-bs-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Resources
             </a>
-            <div className="dropdown-menu" aria-labelledby="dropdownId">
-              <a className="dropdown-item" href="#">
-                Action 1
-              </a>
-              <a className="dropdown-item" href="#">
-                Action 2
-              </a>
-            </div>
           </li>
         </ul>
-        <form className="d-flex my-2 my-lg-0">
-          <input
-            className="form-control me-sm-2"
-            type="text"
-            placeholder="Search"
-          />
-          <button className="btn btn-light my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
+        <div className="d-flex">
+          <a className="nav-link me-5 my-auto" href="#">
+            Login
+          </a>
+          <ButtonLink
+            className="nav-link btn btn-primary text-white px-4 py-2"
+            href="#"
+          >
+            Sign Up
+          </ButtonLink>
+        </div>
       </div>
     </nav>
-  </Container>
+  </header>
 );
 
 export default Navigation;

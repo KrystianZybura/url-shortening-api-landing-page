@@ -4,10 +4,10 @@ import Navigation from "./components/Navigation";
 function App() {
   return (
     <>
-      <header className="bg-light px-2">
+      <header className="bg-light mx-2">
         <Navigation />
       </header>
-      <main>
+      <main className="container">
         <Introduction />
       </main>
     </>

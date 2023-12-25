@@ -4,7 +4,9 @@ import Navigation from "./components/Navigation";
 function App() {
   return (
     <>
-      <Navigation />
+      <header className="bg-light px-2">
+        <Navigation />
+      </header>
       <main>
         <Introduction />
       </main>

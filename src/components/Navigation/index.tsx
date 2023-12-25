@@ -19,7 +19,7 @@ const Navigation = () => (
         className="collapse navbar-collapse text-secondary"
         id="collapsibleNavId"
       >
-        <ul className="navbar-nav me-md-auto mt-lg-0 gap-2 me-3 d-flex flex-wrap align-content-center">
+        <ul className="navbar-nav me-md-auto mt-lg-0 gap-2 me-md-3 d-flex flex-wrap align-content-center text-center text-md-start">
           <li className="nav-item">
             <a className="nav-link" href="#" aria-current="page">
               Features
@@ -36,7 +36,7 @@ const Navigation = () => (
             </a>
           </li>
         </ul>
-        <div className="d-flex flex-column flex-md-row gap-4 gap-md-0">
+        <div className="d-flex flex-column flex-md-row gap-4 ">
           <a
             className="nav-link me-5 mt-3 mt-md-6 my-md-auto text-center"
             href="#"

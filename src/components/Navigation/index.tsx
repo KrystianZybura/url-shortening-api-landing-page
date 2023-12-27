@@ -1,7 +1,7 @@
 import { ButtonLink } from "./styled";
 
 const Navigation = () => (
-  <nav className="container navbar navbar-expand-md navbar-light">
+  <nav className="container navbar navbar-expand-md px-2">
     <a className="navbar-brand fs-2 me-5 fw-bold" href="#">
       Shortly
     </a>

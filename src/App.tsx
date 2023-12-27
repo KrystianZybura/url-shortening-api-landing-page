@@ -4,7 +4,7 @@ import Navigation from "./components/Navigation";
 function App() {
   return (
     <>
-      <header className="bg-light mx-2">
+      <header className="bg-light">
         <Navigation />
       </header>
       <main className="container">

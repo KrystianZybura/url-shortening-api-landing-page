@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const ButtonLink = styled.a`
-  background-color: hsl(180, 66%, 49%);
-  border-radius: 50px;
+  background-color: ${({ theme }) => theme.colors.cyan};
   transition: background-color, 0.3s;
 
   &:hover {
-    background-color: hsl(180, 66%, 40%);
+    background-color: ${({ theme }) => theme.colors.cyan};
+    filter: brightness(110%);
   }
 `;

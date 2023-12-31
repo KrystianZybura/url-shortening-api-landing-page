@@ -1,4 +1,5 @@
 import workingImage from "../../assets/illustration-working.svg";
+import GetStartedButton from "../GetStartedButton";
 
 const Introduction = () => (
   <div className="div my-5">
@@ -12,14 +13,17 @@ const Introduction = () => (
           />
         </div>
       </div>
-      <div className="col-md d-grid align-content-center">
+      <div className="col-md d-grid align-content-center gap-3">
         <h1 className="fw-bold text-black display-3">
           More than just shorter links
         </h1>
-        <p className="mx-0 mt-3 fs-3">
+        <p className="mx-0 fs-4">
           Build your brand's recognition and get detailed insights on how your
           links are performing.
         </p>
+        <div>
+          <GetStartedButton />
+        </div>
       </div>
       <div className="col-md d-none d-md-block my-auto">
         <div>

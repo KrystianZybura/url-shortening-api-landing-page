@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyledForm } from "./styled";
+import { Input, StyledForm } from "./styled";
 
 const Form = () => {
   const [linkValue, setLinkValue] = useState<string>("");
@@ -11,8 +11,8 @@ const Form = () => {
   return (
     <StyledForm onSubmit={onFormSubmit} className="rounded-3">
       <div className="row">
-        <div className="col-10">
-          <input
+        <div className="col-8 col-lg-10">
+          <Input
             value={linkValue}
             onChange={({ target }) => setLinkValue(target.value)}
             placeholder="Shorten a link here.."
@@ -20,8 +20,8 @@ const Form = () => {
             className="form-control py-3"
           />
         </div>
-        <div className="col-2">
-          <button type="submit" className="btn btn-primary px-5 py-3">
+        <div className="col-4 col-lg-2">
+          <button type="submit" className="btn btn-primary w-100 h-100 ">
             Shorten it!
           </button>
         </div>

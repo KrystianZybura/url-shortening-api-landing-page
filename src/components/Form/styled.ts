@@ -6,3 +6,5 @@ export const StyledForm = styled.form`
   background-color: ${({ theme }) => theme.colors.darkViolet};
   padding: 50px 45px;
 `;
+
+export const Input = styled.input``;

@@ -1,4 +1,4 @@
-# URL Shortening Api Landing Page - Frontend Mentor
+# URL Shortener
 
 Another one of frontend mentor projects, currently still in development.
 

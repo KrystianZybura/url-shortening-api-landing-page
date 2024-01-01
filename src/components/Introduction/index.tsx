@@ -1,5 +1,5 @@
 import workingImage from "../../assets/illustration-working.svg";
-import GetStartedButton from "../GetStartedButton";
+import Button from "../Button";
 
 const Introduction = () => (
   <div className="div my-5">
@@ -22,7 +22,7 @@ const Introduction = () => (
           links are performing.
         </p>
         <div>
-          <GetStartedButton />
+          <Button content="Get Started" />
         </div>
       </div>
       <div className="col-md d-none d-md-block my-auto">

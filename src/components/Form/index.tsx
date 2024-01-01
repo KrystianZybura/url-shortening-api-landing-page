@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Input, StyledForm } from "./styled";
+import Button from "../Button";
 
 const Form = () => {
   const [linkValue, setLinkValue] = useState<string>("");
@@ -21,9 +22,7 @@ const Form = () => {
           />
         </div>
         <div className="col-4 col-lg-2">
-          <button type="submit" className="btn btn-primary w-100 h-100 ">
-            Shorten it!
-          </button>
+          <Button formButton content={"Shorten it!"} />
         </div>
       </div>
     </StyledForm>

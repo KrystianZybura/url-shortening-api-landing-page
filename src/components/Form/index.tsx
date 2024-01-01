@@ -22,7 +22,7 @@ const Form = () => {
           />
         </div>
         <div className="col-4 col-lg-2">
-          <Button formButton content={"Shorten it!"} />
+          <Button classes="w-100 h-100" content="Shorten it!" />
         </div>
       </div>
     </StyledForm>

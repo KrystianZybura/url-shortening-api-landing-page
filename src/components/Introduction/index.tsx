@@ -22,7 +22,10 @@ const Introduction = () => (
           links are performing.
         </p>
         <div>
-          <Button content="Get Started" />
+          <Button
+            classes="px-5 py-3 fw-bold fs-sm-5 rounded-5"
+            content="Get Started"
+          />
         </div>
       </div>
       <div className="col-md d-none d-md-block my-auto">

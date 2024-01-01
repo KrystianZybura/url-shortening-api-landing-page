@@ -1,19 +1,13 @@
 import { StyledButton } from "./styled";
 
 const Button = ({
-  formButton,
   content,
+  classes,
 }: {
-  formButton?: boolean;
   content: string;
+  classes?: string;
 }) => (
-  <StyledButton
-    className={`btn text-white ${
-      formButton ? "w-100 h-100" : "px-5 py-3 fw-bold fs-sm-5 rounded-5"
-    } `}
-  >
-    {content}
-  </StyledButton>
+  <StyledButton className={`btn text-white ${classes}`}>{content}</StyledButton>
 );
 
 export default Button;

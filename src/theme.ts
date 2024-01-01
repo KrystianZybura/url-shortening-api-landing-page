@@ -9,4 +9,7 @@ export const theme = {
     veryDarkBlue: "hsl(255, 11%, 22%)",
     veryDarkViolet: "hsl(260, 8%, 14%)",
   },
+  styles: {
+    boxShadow: "0px 0px 0px 7px hsl(180deg 100% 50.65% / 47%)",
+  },
 };

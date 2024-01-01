@@ -37,7 +37,7 @@ const Navigation = () => (
       </ul>
       <div className="d-flex flex-column flex-md-row gap-4 ">
         <a
-          className="nav-link me-5 mt-3 mt-md-6 my-md-auto text-center"
+          className="nav-link me-4 mt-3 mt-md-6 my-md-auto text-center"
           href="#"
         >
           Login

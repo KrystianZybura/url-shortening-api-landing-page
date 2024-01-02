@@ -2,6 +2,7 @@ import Form from "./components/Form";
 import Introduction from "./components/Introduction";
 import Navigation from "./components/Navigation";
 import Output from "./components/Output";
+import Statistics from "./components/Statistics";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Introduction />
         <Form />
         <Output />
+        <Statistics />
       </main>
     </>
   );

@@ -6,10 +6,10 @@ const Output = () => (
     <ul className="list-group gap-4">
       <li className="list-group-item py-3 rounded-3">
         <div className="row gap-3 px-2">
-          <span className="col-md-6 my-auto">
+          <span className="col-lg-6 my-auto">
             https://github.com/KrystianZybura/Personal-Homepage
           </span>
-          <div className="col-md d-flex flex-column flex-md-row gap-3 text-end">
+          <div className="col-lg d-flex flex-column flex-lg-row gap-3 text-lg-end">
             <ShortenedLink className="my-auto flex-grow-1">
               https://shorturl.at/xyST6
             </ShortenedLink>

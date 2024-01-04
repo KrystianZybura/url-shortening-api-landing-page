@@ -13,15 +13,15 @@ const Statistics = () => (
       <p>{headingText}</p>
     </div>
     <div className="row gap-3">
-      <Box className="col bg-white p-4 rounded-2">
+      <Box className="col bg-white rounded-2">
         <h3 className="fw-bold text-dark fs-5 pb-2 mt-5">Brand Recongnition</h3>
         <p>{brandRecognitionText}</p>
       </Box>
-      <Box className="col bg-white p-4 rounded-2">
+      <Box className="col bg-white rounded-2">
         <h3 className="fw-bold text-dark fs-5 pb-2 mt-5">Detailed Records</h3>
         <p>{detailedRecordsText}</p>
       </Box>
-      <Box className="col bg-white p-4 rounded-2">
+      <Box className="col bg-white rounded-2">
         <h3 className="fw-bold text-dark fs-5 pb-2 mt-5">Fully Customizable</h3>
         <p>{fullyCustomizableText}</p>
       </Box>

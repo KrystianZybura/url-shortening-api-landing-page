@@ -1,5 +1,15 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Box = styled.div`
+type MarginProp = {
+  $margin?: boolean;
+};
+
+export const Box = styled.div<MarginProp>`
   padding: 20px 40px;
+
+  ${({ $margin }) =>
+    $margin &&
+    css`
+      margin-top: 96px;
+    `}
 `;

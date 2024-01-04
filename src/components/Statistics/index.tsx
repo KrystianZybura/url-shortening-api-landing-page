@@ -1,4 +1,4 @@
-import { Box } from "./styled";
+import { Box, RowContainer } from "./styled";
 import {
   brandRecognitionText,
   detailedRecordsText,
@@ -12,7 +12,7 @@ const Statistics = () => (
       <h2 className="text-dark fw-bold">Advanced Statistics</h2>
       <p>{headingText}</p>
     </div>
-    <div className="row gap-4">
+    <RowContainer className="row gap-4">
       <Box className="col bg-white rounded-2">
         <h3 className="fw-bold text-dark fs-5 pb-2 mt-5">Brand Recongnition</h3>
         <p>{brandRecognitionText}</p>
@@ -25,7 +25,7 @@ const Statistics = () => (
         <h3 className="fw-bold text-dark fs-5 pb-2 mt-5">Fully Customizable</h3>
         <p>{fullyCustomizableText}</p>
       </Box>
-    </div>
+    </RowContainer>
   </section>
 );
 

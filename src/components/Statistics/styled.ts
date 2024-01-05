@@ -12,6 +12,10 @@ export const Box = styled.div<MarginProp>`
     $margin &&
     css`
       margin-top: 96px;
+
+      @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+        margin-top: 0;
+      }
     `}
 `;
 
@@ -23,4 +27,14 @@ export const RowContainer = styled.div`
     ${({ theme }) => theme.colors.cyan} 52%,
     ${({ theme }) => theme.colors.lightGray} 52%
   );
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    background: linear-gradient(
+      to left,
+      ${({ theme }) => theme.colors.lightGray} 49%,
+      ${({ theme }) => theme.colors.cyan} 49%,
+      ${({ theme }) => theme.colors.cyan} 51%,
+      ${({ theme }) => theme.colors.lightGray} 51%
+    );
+  }
 `;

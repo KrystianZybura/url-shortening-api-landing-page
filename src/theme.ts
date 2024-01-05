@@ -12,4 +12,8 @@ export const theme = {
   styles: {
     boxShadow: "0px 0px 0px 7px hsl(180deg 100% 50.65% / 47%)",
   },
+  breakpoints: {
+    mobileMax: 767,
+    tablet: 991,
+  },
 };

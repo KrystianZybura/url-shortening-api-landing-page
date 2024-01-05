@@ -1,3 +1,4 @@
+import Aside from "./components/Aside";
 import Form from "./components/Form";
 import Introduction from "./components/Introduction";
 import Navigation from "./components/Navigation";
@@ -10,11 +11,14 @@ function App() {
       <header>
         <Navigation />
       </header>
-      <main className="container">
-        <Introduction />
-        <Form />
-        <Output />
-        <Statistics />
+      <main>
+        <div className="container">
+          <Introduction />
+          <Form />
+          <Output />
+          <Statistics />
+        </div>
+        <Aside />
       </main>
     </>
   );

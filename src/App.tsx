@@ -1,4 +1,5 @@
 import Aside from "./components/Aside";
+import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Introduction from "./components/Introduction";
 import Navigation from "./components/Navigation";
@@ -20,6 +21,7 @@ function App() {
         </div>
         <Aside />
       </main>
+      <Footer />
     </>
   );
 }

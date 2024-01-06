@@ -7,6 +7,7 @@ export const GlobalStyle = styled.createGlobalStyle`
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     color: ${({ theme }) => theme.colors.gray};
+    letter-spacing: 0.5px;
     background: linear-gradient(
       to bottom,
       #fff 0px,

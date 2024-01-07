@@ -1,6 +1,3 @@
-export const headingText =
-  "Track how your links are performing across the web with our advanced statistics dashboard.";
-
 export const brandRecognitionText =
   "Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instill confidence in your content.";
 

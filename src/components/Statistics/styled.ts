@@ -14,7 +14,7 @@ export const Box = styled.div<MarginProp>`
       margin-top: 96px;
 
       @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
-        margin-top: 0;
+        margin-top: 48px;
       }
     `}
 `;

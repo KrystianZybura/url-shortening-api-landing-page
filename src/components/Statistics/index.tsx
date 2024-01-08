@@ -1,9 +1,13 @@
-import { Box, RowContainer } from "./styled";
+import { Box, IconWrapper, RowContainer } from "./styled";
 import {
   brandRecognitionText,
   detailedRecordsText,
   fullyCustomizableText,
 } from "./text";
+
+import BrandRecognitionIcon from "../../assets/icon-brand-recognition.svg";
+import DetailedRecordsIcon from "../../assets/icon-brand-recognition.svg";
+import FullyCustomizableIcon from "../../assets/icon-brand-recognition.svg";
 
 const Statistics = () => (
   <section className="container">
@@ -16,15 +20,24 @@ const Statistics = () => (
     </div>
     <RowContainer className="row gap-5 gap-lg-4">
       <Box className="col-lg bg-white rounded-2">
-        <h3 className="fw-bold text-dark fs-5 pb-2 mt-5">Brand Recongnition</h3>
+        <IconWrapper>
+          <img src={BrandRecognitionIcon} alt="Brand recognition icon" />
+        </IconWrapper>
+        <h3 className="fw-bold text-dark fs-5 mb-3">Brand Recongnition</h3>
         <p>{brandRecognitionText}</p>
       </Box>
       <Box className="col-lg bg-white rounded-2 mt-5">
-        <h3 className="fw-bold text-dark fs-5 pb-2 mt-5">Detailed Records</h3>
+        <IconWrapper>
+          <img src={DetailedRecordsIcon} alt="Brand recognition icon" />
+        </IconWrapper>
+        <h3 className="fw-bold text-dark fs-5 mb-3">Detailed Records</h3>
         <p>{detailedRecordsText}</p>
       </Box>
       <Box className="col-lg bg-white rounded-2" $margin>
-        <h3 className="fw-bold text-dark fs-5 pb-2 mt-5">Fully Customizable</h3>
+        <IconWrapper>
+          <img src={FullyCustomizableIcon} alt="Brand recognition icon" />
+        </IconWrapper>
+        <h3 className="fw-bold text-dark fs-5 mb-3">Fully Customizable</h3>
         <p>{fullyCustomizableText}</p>
       </Box>
     </RowContainer>

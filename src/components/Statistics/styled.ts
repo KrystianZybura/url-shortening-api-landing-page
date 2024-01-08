@@ -38,3 +38,13 @@ export const RowContainer = styled.div`
     );
   }
 `;
+
+export const IconWrapper = styled.div`
+  display: inline-block;
+  background-color: ${({ theme }) => theme.colors.darkViolet};
+  position: relative;
+  bottom: 56px;
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: -30px;
+`;

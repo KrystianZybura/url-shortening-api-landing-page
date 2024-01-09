@@ -16,7 +16,7 @@ function App() {
       <main>
         <Introduction />
         <Form />
-        <Container className="py-5">
+        <Container>
           <Output />
           <Statistics />
         </Container>

@@ -7,6 +7,7 @@ type MarginProp = {
 export const Box = styled.div<MarginProp>`
   padding: 20px 40px;
   height: 100%;
+  font-size: 17px;
 
   ${({ $margin }) =>
     $margin &&

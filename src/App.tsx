@@ -5,6 +5,7 @@ import Introduction from "./components/Introduction";
 import Navigation from "./components/Navigation";
 import Output from "./components/Output";
 import Statistics from "./components/Statistics";
+import { Container } from "./components/styled";
 
 function App() {
   return (
@@ -13,12 +14,12 @@ function App() {
         <Navigation />
       </header>
       <main>
-        <div className="container">
-          <Introduction />
-          <Form />
+        <Introduction />
+        <Form />
+        <Container className="py-5">
           <Output />
           <Statistics />
-        </div>
+        </Container>
         <Aside />
       </main>
       <Footer />

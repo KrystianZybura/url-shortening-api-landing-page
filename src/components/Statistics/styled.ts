@@ -20,6 +20,7 @@ export const Box = styled.div<MarginProp>`
 `;
 
 export const RowContainer = styled.div`
+  margin-top: 70px;
   background: linear-gradient(
     to bottom,
     ${({ theme }) => theme.colors.lightGray} 49%,

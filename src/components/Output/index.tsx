@@ -2,7 +2,7 @@ import Button from "../Button";
 import { ShortenedLink } from "./styled";
 
 const Output = () => (
-  <section className="my-5">
+  <section className="container">
     <ul className="list-group gap-4">
       <li className="list-group-item py-3 rounded-3">
         <div className="row gap-3 px-2">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Input, StyledForm } from "./styled";
+import { Input, StyledForm, Wrapper } from "./styled";
 import Button from "../Button";
 
 const Form = () => {
@@ -10,22 +10,24 @@ const Form = () => {
   };
 
   return (
-    <StyledForm onSubmit={onFormSubmit} className="rounded-3">
-      <div className="row gap-2 gap-md-0">
-        <div className="col-md-8 col-lg-10">
-          <Input
-            value={linkValue}
-            onChange={({ target }) => setLinkValue(target.value)}
-            placeholder="Shorten a link here.."
-            type="text"
-            className="form-control py-2 py-md-3"
-          />
+    <Wrapper>
+      <StyledForm onSubmit={onFormSubmit} className="rounded-3 container">
+        <div className="row gap-2 gap-md-0">
+          <div className="col-md-8 col-lg-10">
+            <Input
+              value={linkValue}
+              onChange={({ target }) => setLinkValue(target.value)}
+              placeholder="Shorten a link here.."
+              type="text"
+              className="form-control py-2 py-md-3"
+            />
+          </div>
+          <div className="col-md-4 col-lg-2">
+            <Button classes="w-100 h-100 py-2" content="Shorten it!" />
+          </div>
         </div>
-        <div className="col-md-4 col-lg-2">
-          <Button classes="w-100 h-100 py-2" content="Shorten it!" />
-        </div>
-      </div>
-    </StyledForm>
+      </StyledForm>
+    </Wrapper>
   );
 };
 

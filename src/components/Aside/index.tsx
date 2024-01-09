@@ -2,7 +2,7 @@ import Button from "../Button";
 import { StyledAside } from "./styled";
 
 const Aside = () => (
-  <StyledAside className="py-5 mt-5">
+  <StyledAside className="py-5">
     <div className="d-grid justify-content-center">
       <h3 className="text-white fs-2 fw-bold">Boost your links today</h3>
       <div className="text-center">

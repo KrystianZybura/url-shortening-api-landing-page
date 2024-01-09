@@ -2,7 +2,7 @@ import workingImage from "../../assets/illustration-working.svg";
 import Button from "../Button";
 
 const Introduction = () => (
-  <div className="div my-5">
+  <div className="container my-5">
     <div className="row align-content-center text-center text-md-start">
       <div className="col-md d-block d-md-none mx-auto my-5 px-3">
         <div>

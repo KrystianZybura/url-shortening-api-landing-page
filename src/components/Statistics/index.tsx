@@ -11,8 +11,8 @@ import FullyCustomizableIcon from "../../assets/icon-brand-recognition.svg";
 
 const Statistics = () => (
   <section className="container">
-    <div className="text-center mt-5 pt-5 mx-auto">
-      <h2 className="text-dark fw-bold">Advanced Statistics</h2>
+    <div className="text-center mt-5 pt-2 pt-lg-5 mx-auto">
+      <h2 className="text-dark fw-bold mb-3">Advanced Statistics</h2>
       <p>
         Track how your links are performing across the web with <br /> our
         advanced statistics dashboard.

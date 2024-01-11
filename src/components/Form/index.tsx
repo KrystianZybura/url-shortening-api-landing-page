@@ -9,14 +9,21 @@ const Form = () => {
   const onFormSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    const response = await axios.post("https://urlbae.com/api/url/add", {
-      url: linkValue,
-      headers: {
-        Authorization: "Bearer 7aea4eafea9c752017f8cc213ce7aa43",
-        "Content-Type": "application/json",
-      },
-    });
-    console.log(response.data);
+    const payload = {
+      destination: linkValue,
+      domain: { fullName: "rebrand.ly" },
+    };
+
+    const headers = {
+      apikey: "49e530bd402740f8a4efb8103c957a8b",
+    };
+
+    const response = await axios.post(
+      "https://api.rebrandly.com/v1/links",
+      payload,
+      { headers }
+    );
+    console.log(response);
   };
 
   return (

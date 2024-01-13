@@ -1,29 +1,12 @@
 import { useState } from "react";
 import { Input, StyledForm, Wrapper } from "./styled";
 import Button from "../Button";
-import axios from "axios";
 
 const Form = () => {
   const [linkValue, setLinkValue] = useState<string>("");
 
   const onFormSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-
-    const payload = {
-      destination: linkValue,
-      domain: { fullName: "rebrand.ly" },
-    };
-
-    const headers = {
-      apikey: "49e530bd402740f8a4efb8103c957a8b",
-    };
-
-    const response = await axios.post(
-      "https://api.rebrandly.com/v1/links",
-      payload,
-      { headers }
-    );
-    console.log(response);
   };
 
   return (

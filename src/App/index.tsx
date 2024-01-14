@@ -1,10 +1,10 @@
-import Aside from "./Aside";
-import Footer from "./Footer";
-import Form from "./Form";
-import Introduction from "./Introduction";
-import Navigation from "./Navigation";
-import Output from "./Output";
-import Statistics from "./Statistics";
+import Aside from "./components/Aside";
+import Footer from "./components/Footer";
+import Form from "./components/Form";
+import Introduction from "./components/Introduction";
+import Navigation from "./components/Navigation";
+import Output from "./components/Output";
+import Statistics from "./components/Statistics";
 import { Container } from "./styled";
 
 function App() {

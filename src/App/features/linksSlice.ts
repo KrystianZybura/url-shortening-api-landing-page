@@ -11,3 +11,7 @@ const linksSlice = createSlice({
     },
   },
 });
+
+export const { addLink } = linksSlice.actions;
+
+export default linksSlice.reducer;

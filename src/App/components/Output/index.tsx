@@ -1,4 +1,4 @@
-import { selectLinks } from "../../features/linksSlice";
+import { selectLinks } from "../../features/ShortenLink/linksSlice";
 import Button from "../Button";
 import { ShortenedLink } from "./styled";
 import { useSelector } from "react-redux";

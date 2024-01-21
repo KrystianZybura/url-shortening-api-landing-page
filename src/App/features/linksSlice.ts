@@ -14,9 +14,10 @@ const linksSlice = createSlice({
     setLinks: ({ links }, { payload }) => {
       links.push(payload);
     },
+    shortenLink: () => {},
   },
 });
 
-export const { setLinks } = linksSlice.actions;
+export const { setLinks, shortenLink } = linksSlice.actions;
 export const selectLinks = (state) => state.links;
 export default linksSlice.reducer;

@@ -6,30 +6,24 @@ import { useSelector } from "react-redux";
 const Output = () => {
   const { links } = useSelector(selectLinks);
 
+  console.log(links);
+
   return (
     <section className="container">
       <ul className="list-group gap-4">
-        {links.map(
-          ({
-            defaultLink,
-            shortenedLink,
-          }: {
-            defaultLink: string;
-            shortenedLink: string;
-          }) => (
-            <li className="list-group-item py-3 rounded-3">
-              <div className="row gap-3 px-2">
-                <span className="col-lg-6 my-auto">{defaultLink}</span>
-                <div className="col-lg d-flex flex-column flex-lg-row gap-3 text-lg-end">
-                  <ShortenedLink className="my-auto flex-grow-1">
-                    {shortenedLink}
-                  </ShortenedLink>
-                  <Button classes="px-4" content={`Copy`} />
-                </div>
+        {links.map(({ id, defaultLink, shortenedLink }) => (
+          <li key={id} className="list-group-item py-3 rounded-3">
+            <div className="row gap-3 px-2">
+              <span className="col-lg-6 my-auto">{defaultLink}</span>
+              <div className="col-lg d-flex flex-column flex-lg-row gap-3 text-lg-end">
+                <ShortenedLink className="my-auto flex-grow-1">
+                  {shortenedLink}
+                </ShortenedLink>
+                <Button classes="px-4" content={`Copy`} />
               </div>
-            </li>
-          )
-        )}
+            </div>
+          </li>
+        ))}
       </ul>
     </section>
   );

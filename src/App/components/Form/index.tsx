@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { Input, StyledForm, Wrapper } from "./styled";
 import Button from "../Button";
+import { useDispatch } from "react-redux";
+import { shortenTheLink } from "../../features/ShortenLink/linksSlice";
 
 const Form = () => {
   const [linkValue, setLinkValue] = useState<string>("");
+  const dispatch = useDispatch();
 
   const onFormSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    dispatch(shortenTheLink(linkValue));
   };
 
   return (

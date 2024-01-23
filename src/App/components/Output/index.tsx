@@ -9,7 +9,7 @@ const Output = () => {
   console.log(links);
 
   return (
-    <section className="container">
+    <section className="container text-break">
       <ul className="list-group gap-4">
         {links.map(({ id, defaultLink, shortenedLink }) => (
           <li key={id} className="list-group-item py-3 rounded-3">

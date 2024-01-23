@@ -1,14 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-type State = {
-  links: { defaultLink: string; shortenedLink: string };
-};
+interface State {
+  links: {
+    longUrl: string;
+    links: { id: number; defaultLink?: string; shortenedLink?: string }[];
+  };
+}
 
 const linksSlice = createSlice({
   name: "links",
   initialState: {
+    longUrl: "",
     links: [
       {
+        id: 1,
         defaultLink: "https://github.com/KrystianZybura/Personal-Homepage",
         shortenedLink: "https://shorturl.at/xyST6",
       },
@@ -18,10 +23,19 @@ const linksSlice = createSlice({
     setLinks: ({ links }, { payload }) => {
       links.push(payload);
     },
-    shortenLink: () => {},
+    // updateLinkData: ({ links }, { payload }) => {
+    //   const index = links.findIndex(
+    //     ({ defaultLink }) => defaultLink === payload.defaultLink
+    //   );
+
+    //   links[index].shortenedLink = payload.shortenedLink;
+    // },
+    shortenTheLink: (state, { payload }) => {
+      state.longUrl = payload;
+    },
   },
 });
 
-export const { setLinks, shortenLink } = linksSlice.actions;
+export const { setLinks, shortenTheLink } = linksSlice.actions;
 export const selectLinks = (state: State) => state.links;
 export default linksSlice.reducer;

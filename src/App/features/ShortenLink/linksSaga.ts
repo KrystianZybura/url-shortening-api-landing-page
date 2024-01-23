@@ -1,17 +1,23 @@
 import { call, put, takeEvery } from "redux-saga/effects";
-import { setLinks, shortenLink } from "./linksSlice";
+import { setLinks, shortenTheLink } from "./linksSlice";
+import { linksShortenerAPI } from "./shortenLinkAPI";
 
-function* shortenLinksHandler() {
+function* shortenLinksHandler({
+  payload: defaultLink,
+}: {
+  payload: {
+    defaultLink: string;
+  };
+}) {
   try {
-    // const linksData = yield call(shortenLink, link);
-    // yield put(setLinks(linksData));
+    const { id, link, long_url } = yield call(linksShortenerAPI, defaultLink);
+    yield put(setLinks({ id: id, defaultLink: long_url, shortenedLink: link }));
   } catch (error) {
     console.error(error);
-
     yield call(alert, "Something is off");
   }
 }
 
 export function* linksSaga() {
-  yield takeEvery(shortenLink.type, shortenLinksHandler);
+  yield takeEvery(shortenTheLink.type, shortenLinksHandler);
 }

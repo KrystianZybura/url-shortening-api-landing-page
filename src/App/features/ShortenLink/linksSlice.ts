@@ -23,13 +23,6 @@ const linksSlice = createSlice({
     setLinks: ({ links }, { payload }) => {
       links.push(payload);
     },
-    // updateLinkData: ({ links }, { payload }) => {
-    //   const index = links.findIndex(
-    //     ({ defaultLink }) => defaultLink === payload.defaultLink
-    //   );
-
-    //   links[index].shortenedLink = payload.shortenedLink;
-    // },
     shortenTheLink: (state, { payload }) => {
       state.longUrl = payload;
     },

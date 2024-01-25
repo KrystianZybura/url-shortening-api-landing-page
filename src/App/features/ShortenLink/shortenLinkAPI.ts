@@ -1,7 +1,6 @@
 import axios from "axios";
 
 export const linksShortenerAPI = async (defaultLink: string) => {
-  console.log(typeof defaultLink);
   const response = await axios.post(
     "https://api-ssl.bitly.com/v4/shorten",
     {

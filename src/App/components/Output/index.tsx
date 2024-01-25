@@ -6,8 +6,6 @@ import { useSelector } from "react-redux";
 const Output = () => {
   const { links } = useSelector(selectLinks);
 
-  console.log(links);
-
   return (
     <section className="container text-break">
       <ul className="list-group gap-4">

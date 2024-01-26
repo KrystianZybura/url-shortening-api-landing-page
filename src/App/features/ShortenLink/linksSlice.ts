@@ -1,21 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { State } from "../../utils/types";
+import { Links, State } from "../../utils/types";
 
 const linksSlice = createSlice({
   name: "links",
   initialState: {
     longUrl: "",
-    links: [
-      {
-        id: 1,
-        defaultLink: "https://github.com/KrystianZybura/Personal-Homepage",
-        shortenedLink: "https://shorturl.at/xyST6",
-      },
-    ],
+    links: [] as Links,
   },
   reducers: {
-    setLinks: ({ links }, { payload }) => {
-      links.push(payload);
+    setLinks: (state, { payload }) => {
+      state.links.push(payload);
     },
     shortenTheLink: (state, { payload }) => {
       state.longUrl = payload;

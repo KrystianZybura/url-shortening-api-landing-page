@@ -9,8 +9,14 @@ export interface BitlyApiResponse {
 }
 
 export interface State {
+  longUrl: string;
   links: {
-    longUrl: string;
-    links: { id: number; defaultLink?: string; shortenedLink?: string }[];
+    links: { id: number; defaultLink: string; shortenedLink: string }[];
   };
 }
+
+export type Links = {
+  id: number;
+  defaultLink: string;
+  shortenedLink: string;
+}[];

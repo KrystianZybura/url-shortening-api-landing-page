@@ -1,11 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-interface State {
-  links: {
-    longUrl: string;
-    links: { id: number; defaultLink?: string; shortenedLink?: string }[];
-  };
-}
+import { State } from "../../utils/types";
 
 const linksSlice = createSlice({
   name: "links",

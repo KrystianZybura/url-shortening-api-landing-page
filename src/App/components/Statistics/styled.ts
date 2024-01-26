@@ -1,8 +1,5 @@
 import styled, { css } from "styled-components";
-
-type MarginProp = {
-  $margin?: boolean;
-};
+import { MarginProp } from "../../utils/types";
 
 export const Box = styled.div<MarginProp>`
   padding: 20px 40px;

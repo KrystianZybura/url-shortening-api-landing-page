@@ -1,6 +1,7 @@
 import { call, put, takeEvery } from "redux-saga/effects";
 import { setLinks, shortenTheLink } from "./linksSlice";
 import { linksShortenerAPI } from "./shortenLinkAPI";
+import { bitlyApiResponse } from "../../utils/types";
 
 function* shortenLinksHandler({
   payload: defaultLink,
@@ -10,7 +11,10 @@ function* shortenLinksHandler({
   };
 }) {
   try {
-    const { id, link, long_url } = yield call(linksShortenerAPI, defaultLink);
+    const { id, link, long_url } = yield call(
+      linksShortenerAPI,
+      defaultLink
+    ) as bitlyApiResponse;
     yield put(setLinks({ id: id, defaultLink: long_url, shortenedLink: link }));
   } catch (error) {
     console.error(error);

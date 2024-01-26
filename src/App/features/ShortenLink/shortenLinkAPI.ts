@@ -1,4 +1,5 @@
 import axios from "axios";
+import { BitlyApiResponse } from "../../utils/types";
 
 export const linksShortenerAPI = async (defaultLink: string) => {
   const response = await axios.post(
@@ -14,7 +15,7 @@ export const linksShortenerAPI = async (defaultLink: string) => {
     }
   );
 
-  const { id, link, long_url } = await response.data;
+  const { id, link, long_url } = (await response.data) as BitlyApiResponse;
 
   return { id, link, long_url };
 };

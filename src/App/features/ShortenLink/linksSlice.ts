@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Links, State } from "../../utils/types";
+import { State } from "../../utils/types";
+import { getLinksFromLocalStorage } from "./getLinksFromLocalStorage";
 
 const linksSlice = createSlice({
   name: "links",
   initialState: {
     longUrl: "",
-    links: [] as Links,
+    links: getLinksFromLocalStorage() || [],
   },
   reducers: {
     setLinks: (state, { payload }) => {

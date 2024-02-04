@@ -1,7 +1,8 @@
-import { call, put, takeEvery } from "redux-saga/effects";
-import { setLinks, shortenTheLink } from "./linksSlice";
+import { call, put, select, takeEvery } from "redux-saga/effects";
+import { selectLinks, setLinks, shortenTheLink } from "./linksSlice";
 import { linksShortenerAPI } from "./shortenLinkAPI";
-import { bitlyApiResponse } from "../../utils/types";
+import { BitlyApiResponse } from "../../utils/types";
+import { setLocalStorage } from "./getLinksFromLocalStorage";
 
 function* shortenLinksHandler({
   payload: defaultLink,
@@ -14,7 +15,7 @@ function* shortenLinksHandler({
     const { id, link, long_url } = yield call(
       linksShortenerAPI,
       defaultLink
-    ) as bitlyApiResponse;
+    ) as BitlyApiResponse;
     yield put(setLinks({ id: id, defaultLink: long_url, shortenedLink: link }));
   } catch (error) {
     console.error(error);
@@ -22,6 +23,17 @@ function* shortenLinksHandler({
   }
 }
 
+function* saveLinksInLocalStorageHandler() {
+  try {
+    const { links } = yield select(selectLinks);
+
+    yield call(setLocalStorage, links);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export function* linksSaga() {
   yield takeEvery(shortenTheLink.type, shortenLinksHandler);
+  yield takeEvery("*", saveLinksInLocalStorageHandler);
 }

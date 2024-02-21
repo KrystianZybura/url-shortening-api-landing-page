@@ -10,7 +10,7 @@ const Footer = () => (
     <div className="container">
       <div className="row text-center text-lg-start">
         <div className="col-lg-4">
-          <h3 className="fw-bold fs-1 pe-lg-5 text-white">Shortly</h3>
+          <h3 className="fw-bold fs-1 pe-lg-5 text-white mb-4">Shortly</h3>
         </div>
         <div className="col-lg-2">
           <span className="fw-bold text-white">Features</span>
@@ -57,7 +57,7 @@ const Footer = () => (
             </li>
           </ul>
         </div>
-        <div className="col-lg-2">
+        <div className="col-lg-2 mt-4">
           <div className="d-flex gap-3 justify-content-center text-white">
             <Link>
               <FacebookIcon />

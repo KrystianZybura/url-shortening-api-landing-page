@@ -1,3 +1,4 @@
+import { ButtonBackgroundLine, NavButton } from "./NavButton/styled";
 import { ButtonLink } from "./styled";
 
 const Navigation = () => (
@@ -5,15 +6,17 @@ const Navigation = () => (
     <a className="navbar-brand fs-2 me-5 fw-bold" href="#">
       Shortly
     </a>
-    <button
-      className="navbar-toggler d-lg-none"
+    <NavButton
+      className=" d-md-none"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#collapsibleNavId"
       aria-controls="collapsibleNavId"
       aria-expanded="false"
       aria-label="Toggle navigation"
-    ></button>
+    >
+      <ButtonBackgroundLine />
+    </NavButton>
     <div
       className="collapse navbar-collapse text-secondary"
       id="collapsibleNavId"
